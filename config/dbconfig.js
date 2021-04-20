@@ -2,17 +2,16 @@ const mysql = require('mysql');
 //local mysql db connection
 
 const dbconfig = mysql.createConnection({
-    host:'localhost',
-    user:'root',
+    host: '127.0.0.1',
+    user: 'root',
     password: '',
     database: 'project'
 });
 
-dbconfig.connect(function(err){
-    if(err){
+dbconfig.connect(function(err) {
+    if (err) {
         console.log(err);
-    }
-    else{
+    } else {
         console.log('databse connected');
     }
 });
